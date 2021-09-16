@@ -18,6 +18,11 @@ const App = () => {
     setRecipes(data.hits);
   };
 
+  useEffect(() => {
+    getRecipes();
+    // eslint-disable-next-line
+  }, [query]);
+
   const updateSearch = (e) => {
     setSearch(e.target.value);
   };
@@ -27,10 +32,6 @@ const App = () => {
     setQuery(search);
     setSearch("");
   };
-
-  useEffect(() => {
-    getRecipes();
-  }, [query]);
 
   return (
     <div className="App">
