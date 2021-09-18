@@ -4,16 +4,18 @@ import "./Recipe.css";
 const Recipe = ({ title, calories, image, ingredients }) => {
   return (
     <div className="recipe">
-      <h1>{title}</h1>
-      <p>{calories} cal.</p>
       <img src={image} alt={title} />
-      <ul>
-        {" "}
-        <span id="ingd-title">Ingredients:</span>
-        {ingredients.map((ingredient) => (
-          <li>{ingredient.text}</li>
-        ))}
-      </ul>
+      <div className="detail">
+        <h1>{title}</h1>
+        <p>{calories} cal.</p>
+        <p id="ingd-title">Ingredients:</p>
+        <hr />
+        <ul>
+          {ingredients.map((ingredient) => (
+            <li>{ingredient.text}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
