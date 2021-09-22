@@ -8,7 +8,7 @@ const App = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("chicken");
+  const [query, setQuery] = useState("cake");
 
   const getRecipes = async () => {
     const response = await fetch(
@@ -41,7 +41,7 @@ const App = () => {
           type="text"
           value={search}
           onChange={updateSearch}
-          placeholder="Search Recipes e.g. chicken"
+          placeholder="Search Recipes e.g. cake"
         />
         <button className="search-button" type="submit">
           Search
